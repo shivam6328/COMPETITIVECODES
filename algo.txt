@@ -1,0 +1,17 @@
+1. consider an array  [2,3,1,1,4,3,2,1], where n=4,t=3 and c=3
+2. fix a 'begin' pointer at start and take another 'end' pointer and start moving it forward
+3. while current element is less than 't' and end-begin<c keep moving
+	
+	count=0
+
+4. if end-begin==c
+	increment count
+	then,
+	check the next of end, 
+		if it is less than 't' shift the start<->end window by 1 position.
+	
+		if next of end>t
+			then shift both end and begin to next of current 'end'
+
+5.else if current element is greater than t and end-begin is still less than c
+	shift both begin and end to next of current end
