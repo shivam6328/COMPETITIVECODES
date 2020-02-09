@@ -1,0 +1,28 @@
+median=0
+
+if (max_heap.size()>min_heap.size() and current element<median){
+    int x=max_heap.top();
+    max_heap.pop();
+    min_heap.push(x);
+    max_heap.push(current element);
+    median=(max_heap.top()+min_heap.top())/2;
+}
+else if (max_heap.size()>min_heap.size() and current element>=median){
+    min_heap.push(current element);
+    median=(min_heap.top()+max_heap.top)/2;
+}
+else if (max_heap.size()<min_heap.size() and current element<median){
+    max_heap.push(current element);
+    median=(min_heap.top()+max_heap.top())/2;
+}
+else if (max_heap.size()<min_heap.size() and current element>=median){
+    int x=min_heap.top();
+    min_heap.pop();
+    max_heap.push(x);
+    min_heap.push(current element);
+    median=(min_heap.top()+max_heap.top())/2;
+}
+
+
+
+
